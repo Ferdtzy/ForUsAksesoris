@@ -1,0 +1,192 @@
+/* Mengatur margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout grid untuk produk di keranjang */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Kolom responsif */
+  gap: 2px; /* Jarak antar produk */
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+
+/* Gaya tombol untuk aksi */
+.caption .btn {
+  font-size: 14px; /* Ukuran font tombol */
+  padding: 8px 20px;
+  background: #ff523b; /* Warna tombol */
+  color: #fff;
+  border-radius: 30px;
+  transition: background 0.5s; /* Animasi saat hover */
+}
+
+.caption .btn:hover {
+  background: #563434; /* Warna tombol saat hover */
+}
+
+/* Styling untuk container */
+.container {
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: auto; /* Tengah secara horizontal */
+}
+
+/* Gaya Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none; /* Menghapus bullet list */
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; /* Jarak antar item menu */
+}
+
+a {
+  text-decoration: none; /* Menghapus garis bawah pada tautan */
+  color: #555; /* Warna teks tautan */
+}
+
+/* Gaya untuk heading konten */
+.konten h1 {
+  display: flex;
+  justify-content: center; /* Tengah horizontal */
+  align-items: center; /* Tengah vertikal */
+  font-size: 30px;
+  margin: 20px 0;
+  color: #333; /* Warna heading */
+}
+
+/* Styling untuk footer */
+.footer {
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  padding: 60px 0 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+  color: #555; /* Warna teks paragraf di footer */
+}
+
+.footer h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Gaya untuk kolom di footer */
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+}
+
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 140px; /* Ukuran logo di footer */
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none; /* Menghapus bullet list */
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  cursor: pointer; /* Menampilkan pointer saat hover */
+  transition: color 0.3s ease;
+}
+
+.footer ul li:hover {
+  color: #ff523b; /* Perubahan warna saat hover */
+}
+
+/* Styling untuk form login dan registrasi */
+.login-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.login-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff523b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #563434; /* Efek hover untuk tombol */
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+}

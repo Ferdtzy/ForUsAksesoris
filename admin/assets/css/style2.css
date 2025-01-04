@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Grid untuk produk */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Lebar produk lebih kecil */
+  gap: 2px; /* Jarak antar produk */
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+/* Ukuran thumbnail produk */
+.thumbnail {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 5px; /* Jarak antara konten dan batas */
+  text-align: center;
+  border-radius: 10px;
+  max-width: 220px; /* Menentukan ukuran maksimum thumbnail */
+  margin: 0 auto; /* Membuat thumbnail berada di tengah */
+}
+
+/* Ukuran gambar dalam thumbnail */
+.thumbnail img {
+  width: 100%; /* Gambar memenuhi lebar thumbnail */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 5px; /* Menambahkan sudut melengkung pada gambar */
+  max-width: 180px; /* Membatasi lebar gambar */
+}
+
+/* Ukuran teks dalam caption */
+.caption h3 {
+  font-size: 16px; /* Menyesuaikan ukuran font */
+  margin: 10px 0;
+  color: #333;
+}
+
+.caption p {
+  font-size: 14px; /* Ukuran font lebih kecil */
+  margin: 5px 0 15px;
+  color: #777;
+}
+
+.caption .btn {
+  font-size: 14px; /* Ukuran tombol lebih kecil */
+  padding: 8px 20px;
+  background: #ff523b;
+  color: #fff;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+
+
+.caption .btn:hover {
+  background: #563434;
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+p {
+  color: #555;
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2-md img {
+  max-width: 100%; /* Gambar tidak akan melebihi lebar kolom */
+  height: auto;    /* Tinggi gambar akan disesuaikan secara proporsional */
+  display: block;  /* Menghindari margin default dari inline elements */
+  margin: 0 auto;  /* Gambar akan berada di tengah kolom (opsional) */
+}
+
+
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #563434;
+}
+
+.header {
+  background: radial-gradient(#fff, #ffd6d6);
+}
+
+.header .row {
+  margin-top: 70px;
+}
+
+.konten h1 {
+  display: flex;
+  justify-content: center; /* Menempatkan teks di tengah secara horizontal */
+  align-items: center; /* Menempatkan teks di tengah secara vertikal */
+  font-size: 30px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.footer {
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  padding: 60px 0 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+  color: #555;
+}
+
+.footer h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+}
+
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer ul li:hover {
+  color: #ff523b;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+
+
+
+ .footer-col-2 img {
+  width: 140px;
+}
+
+/*form login*/
+/* Styling for Login and Registration Forms */
+.login-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.login-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.primary {
+  display: inline-block;
+  background: #523bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.primary:hover {
+  background: #e64a19;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.btn:hover {
+  background-color: #ff523b;
+}
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+}

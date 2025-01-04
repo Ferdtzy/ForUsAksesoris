@@ -1,0 +1,304 @@
+/*CSS untuk halaman index.php*/
+
+/* Reset margin dan padding default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Grid untuk produk */
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Maksimal 4 produk per baris */
+  gap: 20px; /* Jarak antar produk */
+  margin-top: 20px;
+}
+
+
+/* Styling untuk thumbnail produk */
+.thumbnail {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 5px; /* Spasi dalam thumbnail */
+  text-align: center;
+  border-radius: 10px; /* Sudut melengkung */
+  max-width: 220px; /* Maksimal lebar thumbnail */
+  margin: 0 auto; /* Thumbnail di tengah */
+}
+
+/* Gambar dalam thumbnail */
+.thumbnail img {
+  width: 100%; /* Gambar sesuai dengan lebar thumbnail */
+  height: auto; /* Rasio gambar tetap */
+  border-radius: 5px; /* Sudut melengkung untuk gambar */
+  max-width: 180px; /* Batas lebar gambar */
+}
+
+/* Gaya teks dalam caption */
+.caption h3 {
+  font-size: 16px; /* Ukuran font untuk nama produk */
+  margin: 10px 0;
+  color: #333; /* Warna teks utama */
+}
+
+.caption p {
+  font-size: 14px; /* Ukuran font untuk harga produk */
+  margin: 5px 0 15px;
+  color: #777; /* Warna teks deskripsi */
+}
+
+/* Tombol dalam caption */
+.caption .btn {
+  font-size: 14px; /* Ukuran font tombol */
+  padding: 8px 20px;
+  background: #ff523b; /* Warna utama tombol */
+  color: #fff; /* Warna teks tombol */
+  border-radius: 30px;
+  transition: background 0.5s; /* Animasi hover tombol */
+}
+
+.caption .btn:hover {
+  background: #563434; /* Warna tombol saat hover */
+}
+
+/* Pengaturan lebar container */
+.container {
+  padding: 0 10px;
+  max-width: 1000px;
+  margin: auto; /* Tengah secara horizontal */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav {
+  flex: 1; /* Navbar mengambil sisa ruang */
+  text-align: right; /* Menu di kanan */
+}
+
+nav ul {
+  display: inline-block;
+  list-style-type: none; /* Menghapus tanda bullet */
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; /* Jarak antar item */
+}
+
+/* Tautan */
+a {
+  text-decoration: none; /* Menghapus garis bawah */
+  color: #555;
+}
+
+/* Kolom gambar hero */
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.col-2-md img {
+  max-width: 100%; /* Gambar tidak lebih lebar dari kolom */
+  height: auto; /* Menjaga rasio gambar */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Heading hero */
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+/* Tombol umum */
+.btn {
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #563434;
+}
+
+/* Header */
+.header {
+  background: radial-gradient(#fff, #ffd6d6); /* Gradient latar belakang header */
+}
+
+.header .row {
+  margin-top: 70px;
+}
+
+/* Heading untuk konten */
+.konten h1 {
+  display: flex;
+  justify-content: center; /* Teks tengah horizontal */
+  align-items: center; /* Teks tengah vertikal */
+  font-size: 30px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.detail a {
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  padding: 60px 0 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+  color: #555;
+}
+
+.footer h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Kolom footer */
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-col-1 {
+  flex-basis: 30%;
+}
+
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-col-2 img {
+  width: 140px; /* Ukuran logo di footer */
+  margin-bottom: 20px;
+}
+
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+
+/* List footer */
+.footer ul {
+  list-style-type: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer ul li:hover {
+  color: #ff523b;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
+
+/* Form Register */
+.register-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.register-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff523b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ff523b;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Kolom lebih kecil */
+    gap: 10px;
+  }
+  .thumbnail {
+    padding: 5px;
+  }
+  .caption h3 {
+    font-size: 16px;
+  }
+  .caption p {
+    font-size: 14px;
+  }
+  .caption .btn {
+    padding: 8px 15px;
+  }
+  .login-form {
+    padding: 20px;
+  }
+}
