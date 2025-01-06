@@ -1,8 +1,8 @@
 <?php
-//Nama File: [nota.php]
-//Deskripsi: Untuk menampilkan nota pesanan
-//Dibuat oleh: [Ferdian Baihaqi] - NIM: [3312411029]
-//Tanggal: [27-12-2024]
+// Nama File: [nota.php]
+// Deskripsi: Untuk menampilkan nota pesanan
+// Dibuat oleh: [Ferdian Baihaqi] - NIM: [3312411029]
+// Tanggal: [27-12-2024]
 session_start();
 // Koneksi ke database
 include 'koneksi.php';
@@ -57,6 +57,7 @@ if ($idpelangganyangbeli !== $idpelangganyanglogin) {
                 <li><a href="index.php">Home</a></li>
                 <li><a href="keranjang.php">Keranjang</a></li>
                 <?php if (isset($_SESSION["pelanggan"])): ?>
+                    <li><a href="riwayat.php">Riwayat</a></li>
                     <li><a href="logout.php">LogOut</a></li>
                 <?php else: ?>
                     <li><a href="login.php">Login</a></li>
@@ -92,19 +93,20 @@ if ($idpelangganyangbeli !== $idpelangganyanglogin) {
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $nomor = 1; ?>
-                    <?php $ambil = $koneksi->query("SELECT * FROM pembelian_produk WHERE id_pembelian = '{$_GET['id']}'"); ?>
-                    <?php while ($pecah = $ambil->fetch_assoc()) { ?>
+                    <?php 
+                    $nomor = 1; 
+                    $ambil = $koneksi->query("SELECT * FROM pembelian_produk WHERE id_pembelian = '{$_GET['id']}'"); 
+                    while ($pecah = $ambil->fetch_assoc()): ?>
                         <tr>
                             <td><?php echo $nomor++; ?></td>
                             <td><?php echo htmlspecialchars($pecah['nama']); ?></td>
                             <td>Rp.<?php echo number_format($pecah['harga']); ?></td>
-                            <td><?php echo htmlspecialchars($pecah['subberat']); ?> Gr.</td>
+                            <td><?php echo htmlspecialchars($pecah['berat']); ?> Gr.</td>
                             <td><?php echo htmlspecialchars($pecah['jumlah']); ?></td>
                             <td><?php echo htmlspecialchars($pecah['subberat']); ?> Gr.</td>
                             <td>Rp.<?php echo number_format($pecah['subharga']); ?></td>
                         </tr>
-                    <?php } ?>
+                    <?php endwhile; ?>
                 </tbody>
             </table>
 

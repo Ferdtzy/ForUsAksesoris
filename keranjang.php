@@ -72,6 +72,28 @@ if(empty($_SESSION['keranjang']) OR !isset($_SESSION["keranjang"])) {
                     </tr>
                 </thead>
                 <tbody>
+                  <!--Psedocode Untuk Keranjang.php-->
+                  <!--Bagian Keranjang Belanja
+
+                    1. Tampilkan judul "Keranjang Belanja" dan garis pemisah.
+                        -Tampilkan tabel dengan kolom:
+                        -No, Produk, Harga, Jumlah, Subharga, Aksi (Hapus).
+
+                    2. Iterasi melalui setiap item dalam keranjang:
+                        -Untuk setiap produk yang ada dalam keranjang (melalui $_SESSION["keranjang"]):
+                        -Ambil ID produk dan jumlah produk.
+                        -Query ke database untuk mengambil data produk berdasarkan id_produk.
+                        -Hitung subharga produk (harga produk * jumlah).
+                        -Tampilkan data produk dalam tabel:
+                          Nomor urut, Nama produk, Harga (dalam format Rupiah), Jumlah produk, Subharga (dalam format Rupiah).
+                          Tampilkan tombol untuk menghapus produk dari keranjang.
+                    3. Tombol Tindakan
+
+                        -Tampilkan dua tombol:
+                         Lanjutkan Belanja: Mengarahkan pengguna ke halaman utama (index.php).
+                         Checkout: Mengarahkan pengguna ke halaman checkout (checkout.php).
+                    Selesai -->
+
                     <?php $nomor=1; ?>
                     <?php foreach ($_SESSION["keranjang"] as $id_produk => $jumlah): ?>
                     <!-- Menampilkan produk yang sedang diproses berdasarkan id_produk -->
